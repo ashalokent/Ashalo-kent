@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #2759ef;
+    text-align: center;
+    border-radius: 10px;
+}
+
+input, select, button {
+    margin: 10px;
+    padding: 8px;
+}</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Simple Calculator</h2>
+
+    <form method="POST">
+        <input type="number" name="num1" required>
+        <input type="number" name="num2" required>
+
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mul">Multiply</option>
+            <option value="div">Divide</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h3>Result: {{ result }}</h3>
+</div>
+
+</body>
+</html>

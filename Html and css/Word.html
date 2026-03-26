@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Meaning</title>
+
+    <style>
+        .container {
+            margin: 100px;
+            font-size: 20px;
+        }
+
+        .word {
+            position: relative;
+            display: inline-block;
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .meaning {
+            position: absolute;
+            right: 110%;   /* Moves popup to LEFT side */
+            top: 0;
+            background-color: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            width: 220px;
+            display: none;
+        }
+
+        .meaning.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="word" onclick="toggleMeaning()">
+        Cestlavie
+        <div class="meaning" id="meaningBox">
+           That's Life.
+         
+        </div>
+    </div>
+    <script>
+    function toggleMeaning() {
+        var box = document.getElementById("meaningBox");
+        box.classList.toggle("show");
+    }
+</script>
+    <div class="word"onclick="toggleMeaning()">
+       Magnanimous
+       <div class="meaning" id="meaningBox">
+        Very kind to other even though you don't like it.
+       </div> 
+    </div>
+</div>
+
+<script>
+    function toggleMeaning() {
+        var box = document.getElementById("meaningBox");
+        box.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>

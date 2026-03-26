@@ -1,0 +1,17 @@
+
+.Main{
+    width: 100%;
+    height: 109vh;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.793)50%,rgba(0, 0, 0, 0.793)50%,),url(kurumi.jpg)
+    
+ }  
+ .Sub{
+    width: 100%;
+    height: 109vh;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.793)50%,rgba(0, 0, 0, 0.793)50%,),url(naruto.jpg) 
+ }
+ 

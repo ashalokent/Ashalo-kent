@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+        .container {
+            margin: 100px;
+            font-size: 20px;
+        }
+
+        .word {
+            position: relative;
+            display: inline-block;
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .meaning {
+            position: absolute;
+            right: 110%;   /* Moves popup to LEFT side */
+            top: 0;
+            background-color: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            width: 220px;
+            display: none;
+        }
+
+        .meaning.show {
+            display: block;
+        }
+    </style>
+</head>
+    
+    
+
+<style>
+        body {
+            background-image: url("data:image/jpeg;base64,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");
+            background-size: cover;        /* Makes image cover full screen */
+            background-repeat: no-repeat;  /* Prevents repeating */
+            background-position: center;   /* Centers the image */
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+<body>
+    <center><h1 style="color: darkblue;">WordMeaning</h1></center>
+  <details>
+  <div class="container">
+    <div class="word"onclick="toggleMeaning()">
+       Cestlavie
+      <div class="meaning" id="That's life">
+        <div class="Main">
+          <div class="word"onclick="toggleMeaning()">
+            Magnanimous
+            <div class="meaning" id="Very kind to other even though you don't like it">
+              <div
+            </div>
+
+          </div>
+        </div>
+
+      </div> 
+</body>
+</html>
